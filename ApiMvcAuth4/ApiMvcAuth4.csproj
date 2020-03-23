@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UserSecretsId>aspnet-ApiMvcAuth4-EB9035C5-3765-4F15-942A-AE026340A698</UserSecretsId>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MailKit" Version="2.5.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="EmailService\bin\Debug\netcoreapp3.1\EmailService.deps.json" />
+      <_ContentIncludedByDefault Remove="EmailService\obj\EmailService.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="EmailService\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="EmailService\obj\project.packagespec.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="EmailService\EmailService.csproj" />
+    </ItemGroup>
+    
+<!--    <ItemGroup>-->
+<!--        <ProjectReference Include="../EmailService/EmailService.csproj" />-->
+<!--    </ItemGroup>-->
+</Project>
